@@ -2,9 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import Hello from './Hello.js';
+import Card from './Card.js';
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons';
+import { robots } from './robots.js';
 
-ReactDOM.render(<Hello greeting={'Hello ' + 'React Ninja'}/>, document.getElementById('root'));
+ReactDOM.render(
+  <div>
+    <Card id={robots[0].id} name={robots[0].name} email={robots[0].emil} />
+    <Card id={robots[1].id} name={robots[1].name} email={robots[1].emil} />
+    <Card id={robots[2].id} name={robots[2].name} email={robots[2].emil} />
+    <Card id={robots[3].id} name={robots[3].name} email={robots[3].emil} />
+  </div>,
+  document.getElementById('root'));
 registerServiceWorker();
